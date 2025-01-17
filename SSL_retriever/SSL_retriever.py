@@ -1,4 +1,4 @@
-# Read the config file
+# Read the default_config_generation file
 import configparser
 import os
 
@@ -7,9 +7,9 @@ import requests
 
 def ssl_getter():
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read('default_config_generation.ini')
 
-    # Extract the API key and domain from the config file
+    # Extract the API key and domain from the default_config_generation file
     api_key = config['DEFAULT']['key']
     private_key = config['DEFAULT']['private-key']
     domain = config['DEFAULT']['domain']

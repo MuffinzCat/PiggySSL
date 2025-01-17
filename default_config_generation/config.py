@@ -29,7 +29,7 @@ def create_default_config():
         'destination': destination
     }
 
-    with open('config.ini', 'w') as configfile:
+    with open('default_config_generation.ini', 'w') as configfile:
         config.write(configfile)
-    print("Made config file as config.ini\n"
+    print("Made default_config_generation file as default_config_generation.ini\n"
           "Manually edit this file if you want to change the domain or keys.")
