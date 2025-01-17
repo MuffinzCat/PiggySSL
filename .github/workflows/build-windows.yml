@@ -25,7 +25,7 @@ jobs:
           pip install pyinstaller
 
       - name: Build executable
-        run: pyinstaller --onefile --name PiggySSL main.py
+        run: pyinstaller --onefile --clean --hidden-import=python312 main.py -n PiggySSL
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
