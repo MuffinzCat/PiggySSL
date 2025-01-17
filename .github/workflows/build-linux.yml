@@ -40,3 +40,5 @@ jobs:
           asset_path: /home/runner/work/PiggySSL/PiggySSL/dist/PiggySSL
           asset_name: PiggySSL-linux
           asset_content_type: application/octet-stream
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}

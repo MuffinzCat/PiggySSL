@@ -38,5 +38,7 @@ jobs:
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: D:\a\PiggySSL\PiggySSL\dist\PiggySSL.exe
-          asset_name: PiggySSL-linux
+          asset_name: PiggySSL-windows.exe
           asset_content_type: application/octet-stream
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
