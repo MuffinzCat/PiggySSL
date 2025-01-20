@@ -1,4 +1,4 @@
-name: Lint Project
+name: Flake8 Lint
 
 on:
   push:
