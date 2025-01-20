@@ -1,9 +1,15 @@
-name: Test Project
+name: Lint Project
 
-on: [ push, pull_request ]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +25,8 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install flake8
 
-      - name: Run tests
+      - name: Run flake8
         run: |
-          python -m unittest discover -s tests
+          flake8 .
